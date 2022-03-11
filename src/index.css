@@ -1,0 +1,29 @@
+@import url("/src/fonts/stylesheet.css");
+
+* {
+    font-family: "Graphik", serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #cccccc #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+    border-radius: 10px;
+    border: 0 none #000000;
+}

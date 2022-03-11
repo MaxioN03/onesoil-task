@@ -1,0 +1,59 @@
+.field_item {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.field_image {
+    width: 48px;
+    height: 48px;
+    border-radius: 7px;
+    background-image: url('/src/resources/images/field_map_image_mock.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.field_info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 3px;
+    flex: 1;
+}
+
+.field_info_row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+
+}
+
+.field_name, .field_suitability, .field_agriculture, .field_area  {
+    color: var(--color-dark);
+    white-space: nowrap;
+}
+
+.field_name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.field_suitability {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.field_agriculture {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.field_area {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-black-light);
+}

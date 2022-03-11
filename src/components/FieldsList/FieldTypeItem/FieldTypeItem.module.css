@@ -1,0 +1,11 @@
+.field_type_item_container {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.field_type_items_list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}

@@ -1,0 +1,13 @@
+.list_container {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Chrome, Edge, and Safari */
+.list_container::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
