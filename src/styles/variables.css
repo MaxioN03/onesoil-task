@@ -10,4 +10,6 @@
     --color-suitable: #72BA7B;
     --color-partially-suitable: #F4D359;
     --color-not-suitable: #999;
+
+    --left-menu-width: 280px;
 }

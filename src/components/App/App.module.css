@@ -1,18 +1,17 @@
 .app {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: 100vh;
     overflow-y: hidden;
+
 }
 
 .app > .side_menu {
     display: flex;
     flex-direction: column;
-    flex: 0 0 280px;
-    height: 100%;
     padding: 5px 15px;
-    box-sizing: border-box;
 }
 
 .app > .content {
@@ -21,4 +20,11 @@
     background-size: cover;
     height: 100%;
     width: 100%;
+}
+
+.__mock_calendar {
+    margin: 10px 0 21px 0;
+    flex: 0 0 42px;
+    background: #E4E7EA;
+    border-radius: 8px;
 }

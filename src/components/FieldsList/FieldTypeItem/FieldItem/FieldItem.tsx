@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './FieldItem.module.css';
-import {Field} from "../types";
-import {getAreaString} from "../utils/getAreaString";
+import {Field} from "../../types";
+import {getAreaString} from "../../utils/getAreaString";
 
 interface IFieldItemProps {
     field: Field

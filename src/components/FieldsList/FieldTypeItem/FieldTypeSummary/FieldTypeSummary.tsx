@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import styles from './FieldTypeSummary.module.css';
-import {FieldSuitability, FieldTypeRelativeLine} from "../../ui/FieldTypeRelativeLine/FieldTypeRelativeLine";
-import {Field} from "../types";
-import {DescriptionIcon} from "../../ui/DescriptionIcon/DescriptionIcon";
-import {getAreaString} from "../utils/getAreaString";
+import {FieldSuitability, FieldTypeRelativeLine} from "../../../ui/FieldTypeRelativeLine/FieldTypeRelativeLine";
+import {Field} from "../../types";
+import {DescriptionIcon} from "../../../ui/DescriptionIcon/DescriptionIcon";
+import {getAreaString} from "../../utils/getAreaString";
 
 interface IFieldTypeSummaryProps {
     suitabilityType: FieldSuitability,
@@ -38,10 +38,6 @@ export const FieldTypeSummary = ({suitabilityType, fields, fieldsCount}: IFieldT
         }, 0);
         setAreasSum(getAreaString(areasSum));
     }, [fields]);
-
-    // console.log('title', title);
-    // console.log('areasSum', areasSum);
-    // console.log('fieldsCount', fieldsCount);
 
     return <div className={styles.field_type_summary}>
         <div className={styles.field_info}>

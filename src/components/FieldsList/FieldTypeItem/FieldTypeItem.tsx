@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './FieldTypeItem.module.css';
 import {Field} from "../types";
-import {FieldTypeSummary} from "../FieldTypeSummary/FieldTypeSummary";
+import {FieldTypeSummary} from "./FieldTypeSummary/FieldTypeSummary";
 import {FieldSuitability} from "../../ui/FieldTypeRelativeLine/FieldTypeRelativeLine";
-import {FieldItem} from "../FieldItem/FieldItem";
+import {FieldItem} from "./FieldItem/FieldItem";
 
 interface IFieldTypeItemProps {
     suitabilityType: FieldSuitability;

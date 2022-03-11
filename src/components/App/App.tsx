@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import styles from './App.module.css';
+import {ProjectTitle} from "../ProjectTitle/ProjectTitle";
 import {FieldsList} from "../FieldsList/FieldsList";
+import {SideMenuControls} from "../SideMenuControls/SideMenuControls";
 import {Field} from "../FieldsList/types";
 import {FieldSuitability} from "../ui/FieldTypeRelativeLine/FieldTypeRelativeLine";
 import {__FIELDS_MOCK} from "../../__mocks/fields";
@@ -38,8 +40,9 @@ export const App = () => {
     return <div className={styles.app}>
         <div className={styles.side_menu}>
             {/*<ProjectTitle/>*/}
+            <div className={styles.__mock_calendar}></div>
             <FieldsList fields={fields}/>
-            {/*<SideMenuControls/>*/}
+            <SideMenuControls/>
         </div>
         <div className={styles.content}></div>
     </div>;
