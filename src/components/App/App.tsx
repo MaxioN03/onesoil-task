@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import styles from './App.module.css';
-import {ProjectTitle} from "../ProjectTitle/ProjectTitle";
 import {FieldsList} from "../FieldsList/FieldsList";
 import {SideMenuControls} from "../SideMenuControls/SideMenuControls";
 import {Field} from "../FieldsList/types";
@@ -16,7 +15,6 @@ export const App = () => {
     }, []);
 
     const __MOCK_GetFields = () => {
-        // console.log('CHECK',__FIELDS_MOCK.map(field => field.suitability).sort((a,b) => a-b));
         let fields = __FIELDS_MOCK.sort((a, b) => b.suitability - a.suitability)
             .reduce((result: any, field) => {
             if (field.suitability >= SUITABLE_BORDER) {

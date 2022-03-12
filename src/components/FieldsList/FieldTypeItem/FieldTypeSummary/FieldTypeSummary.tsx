@@ -5,7 +5,7 @@ import {Field} from "../../types";
 import {DescriptionIcon} from "../../../ui/DescriptionIcon/DescriptionIcon";
 import {getAreaString} from "../../utils/getAreaString";
 
-interface IFieldTypeSummaryProps {
+export interface IFieldTypeSummaryProps {
     suitabilityType: FieldSuitability,
     fields: Field[],
     fieldsCount: Record<FieldSuitability, number> | null,

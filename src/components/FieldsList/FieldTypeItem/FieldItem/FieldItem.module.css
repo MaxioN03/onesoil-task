@@ -6,12 +6,13 @@
 }
 
 .field_image {
-    width: 48px;
+    flex: 0 0 48px;
     height: 48px;
     border-radius: 7px;
     background-image: url('/src/resources/images/field_map_image_mock.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: var(--color-gray-030);
 }
 
 .field_info {
@@ -34,6 +35,12 @@
 .field_name, .field_suitability, .field_agriculture, .field_area  {
     color: var(--color-dark);
     white-space: nowrap;
+}
+
+.field_name, .field_agriculture {
+    max-width: 115px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .field_name {
