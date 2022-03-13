@@ -18,8 +18,8 @@ interface IButtonProps {
     center?: boolean,
     size?: ButtonSize,
     type?: ButtonType,
-    icon?: Element,
-    rightSideControl?: Element,
+    icon?: ReactElement,
+    rightSideControl?: ReactElement,
 }
 
 export const Button = ({
@@ -36,13 +36,9 @@ export const Button = ({
         {icon
             ? <div className={styles.icon_container}>{icon}</div>
             : null}
-        {title || EMPTY_DATA}
+        <span>{title || EMPTY_DATA}</span>
         {rightSideControl
             ? <div className={styles.right_side_control_container}>{rightSideControl}</div>
             : null}
     </button>;
-};
-
-export const Test = () => {
-    return <Button title={<div>Test</div>}/>;
 };
