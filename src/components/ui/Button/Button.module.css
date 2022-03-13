@@ -1,0 +1,61 @@
+.button {
+    width: 100%;
+    display: flex;
+    padding: 0 15px;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    font-weight: 500;
+    overflow: hidden;
+}
+
+.button.center {
+    justify-content: center;
+}
+
+.button.with_right_side_control {
+    padding-right: 0;
+}
+
+.icon_container {
+    display: flex;
+    align-items: center;
+}
+
+.right_side_control_container {
+    margin-left: auto;
+    height: 100%;
+}
+
+.button.s {
+    height: 36px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.button.m {
+    height: 42px;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.button.l {
+    height: 50px;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.button.primary {
+    color: var(--color-white);
+    background-color: var(--color-green);
+}
+
+.button.secondary {
+    color: var(--color-dark);
+    background-color: var(--color-gray-030);
+
+}
