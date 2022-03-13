@@ -20,6 +20,7 @@ interface IButtonProps {
     type?: ButtonType,
     icon?: ReactElement,
     rightSideControl?: ReactElement,
+    inline?: boolean,
 }
 
 export const Button = ({
@@ -28,11 +29,13 @@ export const Button = ({
                            type = ButtonType.Secondary,
                            center,
                            icon,
-                           rightSideControl
+                           rightSideControl,
+                           inline,
                        }: IButtonProps) => {
 
     return <button className={[styles.button, styles[size], styles[type],
-        center ? styles.center : '', rightSideControl ? styles.with_right_side_control : ''].join(' ')}>
+        center ? styles.center : '', rightSideControl ? styles.with_right_side_control : '',
+        inline ? styles.inline : ''].join(' ')}>
         {icon
             ? <div className={styles.icon_container}>{icon}</div>
             : null}

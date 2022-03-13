@@ -8,6 +8,7 @@ import {__FIELDS_MOCK} from "../../__mocks/fields";
 import {PARTIALLY_SUITABLE_BORDER, SUITABLE_BORDER} from "../FieldsList/constants";
 import {Calendar} from "../ui/Calendar/Calendar";
 import {ProjectTitle} from "../ProjectTitle/ProjectTitle";
+import {Content} from "../Content/Content";
 
 export const App = () => {
     const [fields, setFields] = useState<Record<FieldSuitability, Field[]> | null>(null);
@@ -46,6 +47,6 @@ export const App = () => {
             <FieldsList fields={fields}/>
             <SideMenuControls/>
         </div>
-        <div className={styles.content}></div>
+        <Content fields={fields}/>
     </div>;
 };

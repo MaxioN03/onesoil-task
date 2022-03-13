@@ -1,0 +1,7 @@
+.field_filter {
+    width: 292px;
+    background: var(--color-white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    padding: 15px 0 26px 0;
+}

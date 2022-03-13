@@ -1,0 +1,11 @@
+.content {
+    background-image: url('/src/resources/images/map_mock.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15px;
+    position: relative;
+}
+
+.icon_container {
+    margin-right: 10px;
+}

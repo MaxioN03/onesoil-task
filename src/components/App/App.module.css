@@ -13,14 +13,6 @@
     padding: 5px 15px;
 }
 
-.app > .content {
-    background-image: url('/src/resources/images/map_mock.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-}
-
 .calendar {
     margin: 10px 0 21px 0;
 

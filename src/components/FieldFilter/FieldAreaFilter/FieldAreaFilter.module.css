@@ -1,0 +1,26 @@
+.field_area_filter_container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0 3px;
+}
+
+.title {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 12px;
+}
+
+.filter_title {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.filtered_areas {
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--color-black-light);
+}

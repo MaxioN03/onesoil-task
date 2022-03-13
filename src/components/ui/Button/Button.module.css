@@ -14,6 +14,10 @@
     justify-content: center;
 }
 
+.button.inline {
+    width: auto;
+}
+
 .button.with_right_side_control {
     padding-right: 0;
 }
