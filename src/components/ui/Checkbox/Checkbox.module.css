@@ -1,0 +1,67 @@
+.label {
+    position: relative;
+    display: inline-flex;
+    padding-left: 30px;
+    font-size: 14px;
+    height: 20px;
+    align-items: center;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    user-select: none;
+    color: var(--color-black);
+}
+
+.input {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    z-index: -1;
+}
+
+.input.checked {
+    background: #d1d1d1;
+}
+
+.indicator {
+    width: 20px;
+    height: 20px;
+    background: #e6e6e6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0.2em;
+}
+
+.indicator.checked {
+    background: var(--color-green);
+}
+
+.indicator::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.indicator.checked::after {
+    display: block;
+    top: 3px;
+    left: 7px;
+    width: 4px;
+    height: 8px;
+    border: solid var(--color-white);
+    border-width: 0 2px 2px 0;
+    animation-name: rotate;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotate {
+    from {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(45deg);
+    }
+}
