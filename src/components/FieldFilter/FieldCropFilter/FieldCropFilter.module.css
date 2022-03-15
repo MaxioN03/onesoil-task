@@ -1,0 +1,32 @@
+.field_crop_filter {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.title {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 5px 10px 5px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.filter_title {
+    color: var(--color-dark);
+}
+
+.select_all_button {
+    color: var(--color-green);
+    cursor: default;
+}
+
+.checkbox_list {
+    padding: 13px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
