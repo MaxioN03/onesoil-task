@@ -1,3 +1,7 @@
+.project_title {
+    user-select: none;
+}
+
 .title {
     font-style: normal;
     font-weight: bold;

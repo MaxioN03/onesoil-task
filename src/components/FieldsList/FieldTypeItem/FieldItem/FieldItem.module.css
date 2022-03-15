@@ -32,12 +32,12 @@
 
 }
 
-.field_name, .field_suitability, .field_agriculture, .field_area  {
+.field_name, .field_suitability, .field_crop, .field_area  {
     color: var(--color-dark);
     white-space: nowrap;
 }
 
-.field_name, .field_agriculture {
+.field_name, .field_crop {
     max-width: 115px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -54,7 +54,7 @@
     line-height: 14px;
 }
 
-.field_agriculture {
+.field_crop {
     font-size: 12px;
     line-height: 16px;
 }

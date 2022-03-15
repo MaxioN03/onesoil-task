@@ -9,6 +9,7 @@
     flex-wrap: nowrap;
     user-select: none;
     color: var(--color-black);
+    cursor: pointer;
 }
 
 .input {

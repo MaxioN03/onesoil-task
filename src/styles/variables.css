@@ -5,14 +5,20 @@
 
     --color-dark: #222222;
 
+    --color-gray-030: #e4e7ea;
+    --color-gray-hover: #dddfe2;
+    --color-gray-active: #cacccf;
     --color-gray-100: #A5B2BC;
-    --color-gray-030: #E4E7EA;
 
     --color-suitable: #72BA7B;
     --color-partially-suitable: #F4D359;
     --color-not-suitable: #999;
 
-    --left-menu-width: 280px;
-
     --color-green: #27AE60;
+    --color-green-hover: #249f58;
+    --color-green-active: #239252;
+
+    --ui-transition: all 0.1s ease;
+
+    --side-menu-width: 280px;
 }

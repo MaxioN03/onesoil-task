@@ -1,4 +1,4 @@
-export enum Agriculture {
+export enum Crop {
     sunflower = 'sunflower',
     corn = 'corn',
     grain = 'grain',
@@ -8,7 +8,7 @@ export enum Agriculture {
 export type Field = {
     id: string;
     name: string;
-    agriculture: Agriculture[];
+    crop: Crop[];
     area: number;
     suitability: number;
 }

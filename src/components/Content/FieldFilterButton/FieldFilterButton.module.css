@@ -1,0 +1,8 @@
+.button_container {
+    position: relative;
+    z-index: 1;
+}
+
+.icon_container {
+    margin-right: 10px;
+}

@@ -6,35 +6,35 @@ const MOCK_FIELDS = [
     {
         id: "field_1",
         name: "Field 1",
-        agriculture: ["grain"],
+        crop: ["grain"],
         area: 98.1,
         suitability: 77
     },
     {
         id: "field_2",
         name: "Field 2",
-        agriculture: ["grain"],
+        crop: ["grain"],
         area: 85.7,
         suitability: 80
     },
     {
         id: "field_3",
         name: "Field 3",
-        agriculture: ["sunflower"],
+        crop: ["sunflower"],
         area: 101.4,
         suitability: 75
     },
     {
         id: "field_4",
         name: "Field 4",
-        agriculture: ["grain"],
+        crop: ["grain"],
         area: 81,
         suitability: 78
     },
     {
         id: "field_5",
         name: "Field 5",
-        agriculture: ["grain"],
+        crop: ["grain"],
         area: 102.3,
         suitability: 87
     }
@@ -44,7 +44,7 @@ const MOCK_HUGE_AREA_FIELDS = [
     {
         id: "field_1",
         name: "Field 1",
-        agriculture: ["grain"],
+        crop: ["grain"],
         area: 98.1 * Math.pow(10, 10),
         suitability: 77
     }

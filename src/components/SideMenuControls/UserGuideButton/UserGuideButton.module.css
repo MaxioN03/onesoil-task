@@ -10,4 +10,13 @@
     font-size: 14px;
     line-height: 18px;
     font-weight: 500;
+    transition: var(--ui-transition);
+}
+
+.button_container:hover {
+    opacity: 0.8;
+}
+
+.button_container:active {
+    opacity: 1;
 }

@@ -4,7 +4,7 @@
     gap: 10px;
 
     position: fixed;
-    width: var(--left-menu-width);
+    width: var(--side-menu-width);
     left: 0;
     bottom: 0;
 }

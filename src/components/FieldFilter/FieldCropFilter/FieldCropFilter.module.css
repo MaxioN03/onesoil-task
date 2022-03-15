@@ -22,6 +22,17 @@
 .select_all_button {
     color: var(--color-green);
     cursor: default;
+    user-select: none;
+}
+
+.select_all_button:hover {
+    color: var(--color-green-hover);
+    cursor: default;
+}
+
+.select_all_button:active {
+    color: var(--color-green-active);
+    cursor: default;
 }
 
 .checkbox_list {

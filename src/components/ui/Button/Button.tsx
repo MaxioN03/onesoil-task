@@ -21,6 +21,7 @@ interface IButtonProps {
     icon?: ReactElement,
     rightSideControl?: ReactElement,
     inline?: boolean,
+    onClick?: () => void
 }
 
 export const Button = ({
@@ -31,11 +32,14 @@ export const Button = ({
                            icon,
                            rightSideControl,
                            inline,
+                           onClick
                        }: IButtonProps) => {
 
-    return <button className={[styles.button, styles[size], styles[type],
-        center ? styles.center : '', rightSideControl ? styles.with_right_side_control : '',
-        inline ? styles.inline : ''].join(' ')}>
+    return <button
+        className={[styles.button, styles[size], styles[type],
+            center ? styles.center : '', rightSideControl ? styles.with_right_side_control : '',
+            inline ? styles.inline : ''].join(' ')}
+        onClick={onClick}>
         {icon
             ? <div className={styles.icon_container}>{icon}</div>
             : null}

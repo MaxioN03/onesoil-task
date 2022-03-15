@@ -5,4 +5,13 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: var(--ui-transition);
+}
+
+.button_container:hover {
+    opacity: 0.8;
+}
+
+.button_container:active {
+    opacity: 1;
 }

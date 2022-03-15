@@ -5,6 +5,7 @@ import {FieldSuitability} from "../ui/FieldTypeRelativeLine/FieldTypeRelativeLin
 import {Field} from "../FieldsList/types";
 import styles from './FieldFilter.module.css';
 
+
 interface IFieldFilterProps {
     fields: Record<FieldSuitability, Field[]> | null
 }
