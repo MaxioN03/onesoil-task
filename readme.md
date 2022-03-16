@@ -12,4 +12,8 @@
 ### Reference:
 [Figma](https://www.figma.com/file/6RIgcbqjc7xIyMrGr1JniM/Untitled?node-id=0%3A1)
 
-
+### Tech:
+* React
+* TypeScript
+* Storybook
+* _CSS is pure_
