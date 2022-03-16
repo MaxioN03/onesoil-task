@@ -18,7 +18,7 @@ export const App = () => {
 
     const __MOCK_GetFields = () => {
         let fields = __FIELDS_MOCK.sort((a, b) => b.suitability - a.suitability)
-            .reduce((result: any, field) => {
+            .reduce((result: Record<FieldSuitability, Field[]>, field) => {
                 if (field.suitability >= SUITABLE_BORDER) {
                     result[FieldSuitability.suitable].push(field);
                 } else if (field.suitability >= PARTIALLY_SUITABLE_BORDER) {

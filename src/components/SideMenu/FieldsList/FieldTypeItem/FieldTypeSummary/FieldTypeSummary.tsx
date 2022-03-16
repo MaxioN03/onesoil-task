@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {ReactElement, useEffect, useState} from 'react';
 import styles from './FieldTypeSummary.module.css';
 import {FieldSuitability, FieldTypeRelativeLine} from "../../../../ui/FieldTypeRelativeLine/FieldTypeRelativeLine";
 import {Field} from "../../types";
@@ -13,7 +13,7 @@ export interface IFieldTypeSummaryProps {
 
 export const FieldTypeSummary = ({suitabilityType, fields, fieldsCount}: IFieldTypeSummaryProps) => {
     const [title, setTitle] = useState<string>('');
-    const [areasSum, setAreasSum] = useState<any>(null);
+    const [areasSum, setAreasSum] = useState<ReactElement | null>(null);
 
     useEffect(() => {
         let title = 'Unknown';
