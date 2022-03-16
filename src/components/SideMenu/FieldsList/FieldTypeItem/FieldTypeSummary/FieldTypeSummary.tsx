@@ -1,9 +1,9 @@
 import React, {ReactElement, useEffect, useState} from 'react';
 import styles from './FieldTypeSummary.module.css';
-import {FieldSuitability, FieldTypeRelativeLine} from "../../../../ui/FieldTypeRelativeLine/FieldTypeRelativeLine";
 import {Field} from "../../types";
 import {DescriptionIcon} from "../../../../ui/DescriptionIcon/DescriptionIcon";
 import {getAreaString} from "../../utils/getAreaString";
+import {FieldSuitability, FieldTypeRelativeLine} from "../../../../ui/FieldTypeRelativeLine/FieldTypeRelativeLine";
 
 export interface IFieldTypeSummaryProps {
     suitabilityType: FieldSuitability,

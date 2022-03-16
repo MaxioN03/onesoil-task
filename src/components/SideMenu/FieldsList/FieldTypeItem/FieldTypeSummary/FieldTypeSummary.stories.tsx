@@ -1,6 +1,6 @@
 import React from 'react';
 import {FieldTypeSummary, IFieldTypeSummaryProps} from './FieldTypeSummary';
-import {FieldSuitability} from "../../../ui/FieldTypeRelativeLine/FieldTypeRelativeLine";
+import {FieldSuitability} from "../../../../ui/FieldTypeRelativeLine/FieldTypeRelativeLine";
 
 const MOCK_FIELDS = [
     {
