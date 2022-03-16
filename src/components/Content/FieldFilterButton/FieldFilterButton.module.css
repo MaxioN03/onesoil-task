@@ -31,6 +31,7 @@
     color: var(--color-dark);
     padding: 0 var(--padding-common-small);
     background: var(--color-yellow);
+    white-space: nowrap;
     border-radius: 20px;
     display: flex;
     justify-content: center;
