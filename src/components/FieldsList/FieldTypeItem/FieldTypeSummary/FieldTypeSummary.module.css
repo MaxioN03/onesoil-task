@@ -17,17 +17,13 @@
 }
 
 .field_type .title {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
+    font: var(--font-l-medium);
     color: var(--color-dark);
     white-space: nowrap;
 }
 
 .area_sum {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
+    font: var(--font-s-medium);
     color: var(--color-dark);
     white-space: nowrap;
 }

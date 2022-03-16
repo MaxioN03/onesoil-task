@@ -1,12 +1,11 @@
 .button {
     width: 100%;
     display: flex;
-    padding: 0 15px;
+    padding: 0 var(--padding-common-big);
     align-items: center;
     background-color: transparent;
     border-radius: 0;
     border: none;
-    font-weight: 500;
     overflow: hidden;
     user-select: none;
     transition: var(--ui-transition);
@@ -38,22 +37,19 @@
 .button.s {
     height: 36px;
     border-radius: 6px;
-    font-size: 14px;
-    line-height: 18px;
+    font: var(--font-m-medium);
 }
 
 .button.m {
     height: 42px;
     border-radius: 8px;
-    font-size: 16px;
-    line-height: 22px;
+    font: var(--font-l-medium);
 }
 
 .button.l {
     height: 50px;
     border-radius: 8px;
-    font-size: 16px;
-    line-height: 22px;
+    font: var(--font-l-medium);
 }
 
 .button.primary {

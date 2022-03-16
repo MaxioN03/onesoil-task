@@ -21,8 +21,7 @@
 
 .input {
     flex: 1;
-    font-size: 14px;
-    line-height: 18px;
+    font: var(--font-m);
     color: var(--color-dark);
     border-radius: 0;
     border: none;

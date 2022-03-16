@@ -9,10 +9,8 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    padding: 0 5px 10px 5px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
+    padding: 0 var(--padding-common-small) 10px var(--padding-common-small);
+    font: var(--font-m-medium);
 }
 
 .filter_title {
@@ -36,7 +34,7 @@
 }
 
 .checkbox_list {
-    padding: 13px 5px;
+    padding: var(--padding-common-big) var(--padding-common-small);
     display: flex;
     flex-direction: column;
     gap: 18px;

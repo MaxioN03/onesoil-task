@@ -1,3 +1,4 @@
+
 .button_container {
     position: relative;
     z-index: 1;
@@ -5,4 +6,31 @@
 
 .icon_container {
     margin-right: 10px;
+}
+
+.title {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: var(--padding-common-small);
+}
+
+.close_control {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+}
+
+.filtered_fields_count {
+    font: var(--font-s-medium);
+    color: var(--color-dark);
+    padding: 0 var(--padding-common-small);
+    background: var(--color-yellow);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

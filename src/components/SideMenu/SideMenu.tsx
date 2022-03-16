@@ -8,7 +8,7 @@ import {ProjectTitle} from "../ProjectTitle/ProjectTitle";
 export const SideMenu = () => {
     return <div className={styles.side_menu}>
         <ProjectTitle/>
-        <div className={styles.calendar}>
+        <div className={styles.calendar_container}>
             <Calendar />
         </div>
         <FieldsList/>

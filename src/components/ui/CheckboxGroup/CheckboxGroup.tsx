@@ -29,7 +29,7 @@ export const CheckboxGroup = ({items, onChange}: ICheckboxProps) => {
 
     return <div className={styles.checkbox_group_container}>
         {items.map(({id, title}) => {
-            return <Checkbox id={id} title={title} checked={checked[id] ?? false} onChange={onCheck.bind(null, id)}/>;
+            return <Checkbox key={id} id={id} title={title} checked={checked[id] ?? false} onChange={onCheck.bind(null, id)}/>;
         })}
     </div>;
 };

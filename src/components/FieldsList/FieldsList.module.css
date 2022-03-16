@@ -6,7 +6,6 @@
     padding-bottom: 116px;
 }
 
-/* Chrome, Edge, and Safari */
 .list_container::-webkit-scrollbar {
     width: 0;
     height: 0;

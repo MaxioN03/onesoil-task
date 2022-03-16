@@ -4,7 +4,6 @@ import {FieldCropFilter} from "./FieldCropFilter/FieldCropFilter";
 import styles from './FieldFilter.module.css';
 
 export const FieldFilter = () => {
-
     return <div className={styles.field_filter}>
         <FieldAreaFilter/>
         <FieldCropFilter/>

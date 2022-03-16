@@ -9,6 +9,7 @@ import {getCropDisplayName} from "../../FieldsList/utils/getCropDisplayName";
 export const FieldCropFilter = () => {
     const [searchValue, setSearchValue] = useState<string>('');
     const [cropTypes, setCropTypes] = useState<Crop[]>([]);
+    const [cropTypesFiltered, setCropTypesFiltered] = useState<Crop[]>([]);
     const [cropTypesChecked, setCropTypesChecked] = useState<Record<string, boolean>>({});
 
     useEffect(() => {
@@ -17,6 +18,7 @@ export const FieldCropFilter = () => {
             cropTypes.push(crop as Crop);
         }
         setCropTypes(cropTypes);
+        setCropTypesFiltered(cropTypes);
 
         let cropTypesChecked = cropTypes.reduce((result: Record<string, boolean>, crop) => {
             result[crop as Crop] = true;
@@ -25,13 +27,21 @@ export const FieldCropFilter = () => {
         setCropTypesChecked(cropTypesChecked);
     }, []);
 
+    useEffect(() => {
+        let cropTypesFiltered = searchValue
+            ? cropTypes.filter(cropType => cropType.toLowerCase().includes(searchValue.toLowerCase()))
+            : cropTypes;
+
+        setCropTypesFiltered(cropTypesFiltered);
+    }, [cropTypes, searchValue]);
+
     const selectAll = () => {
         let cropTypesChecked = cropTypes.reduce((result: Record<string, boolean>, crop) => {
             result[crop as Crop] = true;
             return result;
         }, {});
         setCropTypesChecked(cropTypesChecked);
-    }
+    };
 
     return <div className={styles.field_crop_filter}>
         <div className={styles.title}>
@@ -41,12 +51,12 @@ export const FieldCropFilter = () => {
         <Input placeholder={'Search...'} value={searchValue}
                onChange={setSearchValue} icon={SearchIcon}/>
         <div className={styles.checkbox_list}>
-            <CheckboxGroup items={cropTypes.map(crop => {
+            <CheckboxGroup items={cropTypesFiltered.map(crop => {
                 return {
                     id: crop,
                     title: getCropDisplayName(crop),
                     checked: cropTypesChecked[crop]
-                }
+                };
             })} onChange={setCropTypesChecked}/>
         </div>
     </div>;

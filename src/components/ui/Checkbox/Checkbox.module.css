@@ -2,7 +2,7 @@
     position: relative;
     display: inline-flex;
     padding-left: 30px;
-    font-size: 14px;
+    font: var(--font-m);
     height: 20px;
     align-items: center;
     white-space: nowrap;

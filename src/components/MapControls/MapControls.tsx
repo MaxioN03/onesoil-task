@@ -6,13 +6,13 @@ import CurrentLocationIcon from './current_location_icon_16.svg';
 
 interface MapControl {
     icon: ReactElement,
-    title?: string
+    title: string
 }
 
 export const MapControls = () => {
     return <div className={styles.map_controls}>
-        <MapControlGroup controls={[{icon: PlusIcon}, {icon: MinusIcon}]}/>
-        <MapControlGroup controls={[{icon: CurrentLocationIcon}]}/>
+        <MapControlGroup controls={[{icon: PlusIcon, title: 'zoom plus'}, {icon: MinusIcon, title: 'zoom minus'}]}/>
+        <MapControlGroup controls={[{icon: CurrentLocationIcon, title: 'current location'}]}/>
     </div>;
 };
 
@@ -22,15 +22,15 @@ interface IMapControlGroupProps {
 
 const MapControlGroup = ({controls}: IMapControlGroupProps) => {
     return <div className={styles.map_control_group}>
-        {controls.map(({icon}, index, arr) => {
-            return <>
-                <div className={styles.map_control}>
-                    <img src={icon}/>
+        {controls.map(({icon, title}, index, arr) => {
+            return <React.Fragment key={title}>
+                <div className={styles.map_control} >
+                    <img src={icon} alt={title}/>
                 </div>
                 {index !== arr.length - 1
                     ? <div className={styles.map_control_separator}/>
                     : null}
-            </>;
+            </React.Fragment>;
         })}
     </div>;
 };

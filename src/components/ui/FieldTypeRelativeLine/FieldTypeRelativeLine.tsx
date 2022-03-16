@@ -24,7 +24,7 @@ export const FieldTypeRelativeLine = ({
     for (let suitability in FieldSuitability) {
         let fieldsSuitabilityCount = fieldsCount?.[suitability as FieldSuitability] ?? 0;
         if (fieldsSuitabilityCount) {
-            lines.push(<div style={{flex: fieldsSuitabilityCount.toString()}}
+            lines.push(<div key={suitability} style={{flex: fieldsSuitabilityCount.toString()}}
                             className={[styles.line, styles[suitability],
                                 currentSuitableType === suitability ? styles.current : ''].join(' ')}/>);
         }

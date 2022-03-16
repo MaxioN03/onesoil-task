@@ -91,13 +91,14 @@ export const FieldAreaSlider = ({min, max, onChange, fieldsAreas}: IFieldAreaSli
                     FieldSuitability.partially_suitable,
                     FieldSuitability.suitable,
                 ].map(fieldsTypeAreas => {
-                    return fieldsAreas?.[fieldsTypeAreas].map(value => {
+                    return fieldsAreas?.[fieldsTypeAreas].map((value, index) => {
                         let style = {
                             left: `calc(${((value - min) * 100 / (max - min))}% - 0px)`
                         };
-                        return <div className={[styles.slider__field_dot, styles[fieldsTypeAreas]].join(' ')}
+                        return <div key={`${fieldsTypeAreas}_${value}_${index}`}
+                                    className={[styles.slider__field_dot, styles[fieldsTypeAreas]].join(' ')}
                                     style={style}/>;
-                    })
+                    });
                 })}
             </div>
             <div className={styles.slider__track}/>
