@@ -16,4 +16,4 @@
 * React
 * TypeScript
 * Storybook
-* _CSS is pure_
+* _CSS is vanilla_
