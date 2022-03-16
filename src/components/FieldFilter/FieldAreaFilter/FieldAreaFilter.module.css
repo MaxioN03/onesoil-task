@@ -20,4 +20,7 @@
 .filtered_areas {
     font: var(--font-m);
     color: var(--color-black-light);
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
 }

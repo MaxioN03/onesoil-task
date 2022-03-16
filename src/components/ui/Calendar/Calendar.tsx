@@ -4,15 +4,14 @@ import {Button} from "../Button/Button";
 import CalendarIcon from './calendar_icon.svg';
 import ArrowIcon from './arrow_icon.svg';
 
-interface ICalendarProps {
-}
+const CALENDAR_TITLE = 'Season 2021';
 
-export const Calendar = ({}: ICalendarProps) => {
+export const Calendar = () => {
 
-    return <Button title={'Season 2021'}
-                   icon={<img src={CalendarIcon} alt='Test icon' className={styles.icon_container}/>}
+    return <Button title={CALENDAR_TITLE}
+                   icon={<img src={CalendarIcon} alt='Calendar icon' className={styles.icon_container}/>}
                    rightSideControl={<div className={styles.right_arrow_container}>
-                       <img src={ArrowIcon} alt='Arrow icon'/>
+                       <img src={ArrowIcon} alt='Arrow to right icon'/>
                    </div>}
 
     />;

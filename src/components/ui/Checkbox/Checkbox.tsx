@@ -24,7 +24,7 @@ export const Checkbox = ({checked, onChange, id, title}: ICheckboxProps) => {
             {title || id || EMPTY_DATA}
             <input
                 id={id}
-                type="checkbox"
+                type='checkbox'
                 className={[styles.input, checked ? styles.checked : ''].join(' ')}
                 checked={checked}
                 onChange={onCheck}

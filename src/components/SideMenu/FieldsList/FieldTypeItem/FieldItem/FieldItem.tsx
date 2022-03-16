@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './FieldItem.module.css';
 import {Field} from "../../types";
 import {getAreaString} from "../../utils/getAreaString";
-import {EMPTY_DATA} from "../../../../constants/constants";
+import {EMPTY_DATA} from "../../../../../constants/constants";
 import {getCropDisplayName} from "../../utils/getCropDisplayName";
 
 export interface IFieldItemProps {

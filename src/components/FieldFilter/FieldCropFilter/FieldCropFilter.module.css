@@ -21,6 +21,7 @@
     color: var(--color-green);
     cursor: default;
     user-select: none;
+    transition: var(--ui-transition);
 }
 
 .select_all_button:hover {

@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import styles from './FieldTypeSummary.module.css';
-import {FieldSuitability, FieldTypeRelativeLine} from "../../../ui/FieldTypeRelativeLine/FieldTypeRelativeLine";
+import {FieldSuitability, FieldTypeRelativeLine} from "../../../../ui/FieldTypeRelativeLine/FieldTypeRelativeLine";
 import {Field} from "../../types";
-import {DescriptionIcon} from "../../../ui/DescriptionIcon/DescriptionIcon";
+import {DescriptionIcon} from "../../../../ui/DescriptionIcon/DescriptionIcon";
 import {getAreaString} from "../../utils/getAreaString";
 
 export interface IFieldTypeSummaryProps {

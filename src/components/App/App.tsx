@@ -1,9 +1,9 @@
 import React, {createContext, useEffect, useState} from 'react';
 import styles from './App.module.css';
-import {Field} from "../FieldsList/types";
+import {Field} from "../SideMenu/FieldsList/types";
 import {FieldSuitability} from "../ui/FieldTypeRelativeLine/FieldTypeRelativeLine";
 import {__FIELDS_MOCK} from "../../__mocks/fields";
-import {PARTIALLY_SUITABLE_BORDER, SUITABLE_BORDER} from "../FieldsList/constants";
+import {PARTIALLY_SUITABLE_BORDER, SUITABLE_BORDER} from "../SideMenu/FieldsList/constants";
 import {Content} from "../Content/Content";
 import {SideMenu} from "../SideMenu/SideMenu";
 

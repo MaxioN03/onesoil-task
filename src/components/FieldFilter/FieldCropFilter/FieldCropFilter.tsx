@@ -2,9 +2,9 @@ import React, {useEffect, useState} from 'react';
 import styles from './FieldCropFilter.module.css';
 import {Input} from "../../ui/Input/Input";
 import SearchIcon from "./search_icon.svg";
-import {Crop} from "../../FieldsList/types";
+import {Crop} from "../../SideMenu/FieldsList/types";
 import {CheckboxGroup} from "../../ui/CheckboxGroup/CheckboxGroup";
-import {getCropDisplayName} from "../../FieldsList/utils/getCropDisplayName";
+import {getCropDisplayName} from "../../SideMenu/FieldsList/utils/getCropDisplayName";
 
 export const FieldCropFilter = () => {
     const [searchValue, setSearchValue] = useState<string>('');

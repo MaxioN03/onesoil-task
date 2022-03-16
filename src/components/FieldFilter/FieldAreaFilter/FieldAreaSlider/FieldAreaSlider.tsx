@@ -17,7 +17,6 @@ export const FieldAreaSlider = ({min, max, onChange, fieldsAreas}: IFieldAreaSli
     const maxValRef = useRef(null);
     const range = useRef(null);
 
-    // Convert to percentage
     const getPercent = useCallback((value) => {
         Math.round(((value - min) / (max - min)) * 100);
     }, [min, max]);
@@ -27,7 +26,6 @@ export const FieldAreaSlider = ({min, max, onChange, fieldsAreas}: IFieldAreaSli
         setMaxVal(max);
     }, [min, max]);
 
-    // Set width of the range to decrease from the left side
     useEffect(() => {
         if (maxValRef.current) {
             const minPercent = getPercent(minVal);
@@ -40,7 +38,6 @@ export const FieldAreaSlider = ({min, max, onChange, fieldsAreas}: IFieldAreaSli
         }
     }, [minVal, getPercent]);
 
-    // Set width of the range to decrease from the right side
     useEffect(() => {
         if (minValRef.current) {
             const minPercent = getPercent(+minValRef.current.value);
@@ -52,14 +49,13 @@ export const FieldAreaSlider = ({min, max, onChange, fieldsAreas}: IFieldAreaSli
         }
     }, [maxVal, getPercent]);
 
-    // Get min and max values when their state changes
     useEffect(() => {
         onChange({min: minVal, max: maxVal});
     }, [minVal, maxVal, onChange]);
 
     return <div className={styles.slider_container}>
         <input
-            type="range"
+            type='range'
             min={min}
             max={max}
             value={minVal}
@@ -69,7 +65,8 @@ export const FieldAreaSlider = ({min, max, onChange, fieldsAreas}: IFieldAreaSli
                 setMinVal(value);
                 event.target.value = value.toString();
             }}
-            className={[styles.thumb, styles.left_thumb, styles['thumb--zindex-3'], minVal > max - 100 ? styles['thumb--zindex-5'] : ''].join(' ')}
+            className={[styles.thumb, styles.left_thumb,
+                styles.thumb_zindex_3, minVal > max - 100 ? styles.thumb_zindex_5 : ''].join(' ')}
         />
         <input
             type="range"
@@ -82,10 +79,10 @@ export const FieldAreaSlider = ({min, max, onChange, fieldsAreas}: IFieldAreaSli
                 setMaxVal(value);
                 event.target.value = value.toString();
             }}
-            className={[styles.thumb, styles.right_thumb, styles['thumb--zindex-4']].join(' ')}
+            className={[styles.thumb, styles.right_thumb, styles.thumb_zindex_4].join(' ')}
         />
         <div className={styles.slider}>
-            <div className={styles.slider__fields_dots}>
+            <div className={styles.slider_fields_dots}>
                 {[
                     FieldSuitability.not_suitable,
                     FieldSuitability.partially_suitable,
@@ -96,13 +93,13 @@ export const FieldAreaSlider = ({min, max, onChange, fieldsAreas}: IFieldAreaSli
                             left: `calc(${((value - min) * 100 / (max - min))}% - 0px)`
                         };
                         return <div key={`${fieldsTypeAreas}_${value}_${index}`}
-                                    className={[styles.slider__field_dot, styles[fieldsTypeAreas]].join(' ')}
+                                    className={[styles.slider_field_dot, styles[fieldsTypeAreas]].join(' ')}
                                     style={style}/>;
                     });
                 })}
             </div>
-            <div className={styles.slider__track}/>
-            <div ref={range} className={styles.slider__range}/>
+            <div className={styles.slider_track}/>
+            <div ref={range} className={styles.slider_range}/>
         </div>
     </div>;
 };

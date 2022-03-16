@@ -33,6 +33,6 @@ export const FieldTypeRelativeLine = ({
     return <div className={styles.field_type_relative_lines_container}>
         {lines.length
             ? lines
-            : <div style={{flex: '1'}} className={styles.line}/>}
+            : <div className={styles.line}/>}
     </div>;
 };

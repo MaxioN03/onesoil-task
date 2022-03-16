@@ -1,8 +1,8 @@
 import React, {useContext, useEffect, useState} from 'react';
 import styles from './FieldsList.module.css';
-import {FieldSuitability} from "../ui/FieldTypeRelativeLine/FieldTypeRelativeLine";
+import {FieldSuitability} from "../../ui/FieldTypeRelativeLine/FieldTypeRelativeLine";
 import {FieldTypeItem} from "./FieldTypeItem/FieldTypeItem";
-import {FieldsContext} from "../App/App";
+import {FieldsContext} from "../../App/App";
 
 export const FieldsList = () => {
     const fields = useContext(FieldsContext);
@@ -20,8 +20,12 @@ export const FieldsList = () => {
     }, [fields]);
 
     return <div className={styles.list_container}>
-        <FieldTypeItem suitabilityType={FieldSuitability.suitable} fields={fields} fieldsCount={fieldsCount}/>
-        <FieldTypeItem suitabilityType={FieldSuitability.partially_suitable} fields={fields} fieldsCount={fieldsCount}/>
-        <FieldTypeItem suitabilityType={FieldSuitability.not_suitable} fields={fields} fieldsCount={fieldsCount}/>
+        {[
+            FieldSuitability.suitable,
+            FieldSuitability.partially_suitable,
+            FieldSuitability.not_suitable].map(suitabilityType => {
+            return <FieldTypeItem key={suitabilityType} suitabilityType={suitabilityType}
+                                  fields={fields} fieldsCount={fieldsCount}/>;
+        })}
     </div>;
 };

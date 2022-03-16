@@ -1,4 +1,4 @@
-import {EMPTY_DATA} from "../../../constants/constants";
+import {EMPTY_DATA} from "../../../../constants/constants";
 
 const HECTARES_STRING = 'ha';
 const HUGE_AREA = Math.pow(10, 6);

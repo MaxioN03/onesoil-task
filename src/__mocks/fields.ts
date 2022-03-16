@@ -1,4 +1,4 @@
-import {Crop, Field} from "../components/FieldsList/types";
+import {Crop, Field} from "../components/SideMenu/FieldsList/types";
 
 export const __FIELDS_MOCK: Field[] = [
     {

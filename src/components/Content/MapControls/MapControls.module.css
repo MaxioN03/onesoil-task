@@ -6,6 +6,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    z-index: 0;
+    user-select: none;
 }
 
 .map_control_group {
@@ -24,6 +26,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .map_control_group > .map_control:first-child {
@@ -34,6 +37,18 @@
 .map_control_group > .map_control:last-child {
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
+}
+
+.map_control_group > .map_control img {
+    transition: var(--ui-transition);
+}
+
+.map_control_group > .map_control:hover img {
+    opacity: 0.8;
+}
+
+.map_control_group > .map_control:active img {
+    opacity: 1;
 }
 
 .map_control_separator {

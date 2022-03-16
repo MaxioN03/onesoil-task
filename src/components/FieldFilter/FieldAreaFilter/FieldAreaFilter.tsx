@@ -2,7 +2,7 @@ import React, {useContext, useEffect, useState} from 'react';
 import {FieldSuitability} from "../../ui/FieldTypeRelativeLine/FieldTypeRelativeLine";
 import {FieldAreaSlider} from "./FieldAreaSlider/FieldAreaSlider";
 import styles from './FieldAreaFilter.module.css';
-import {getAreaString} from "../../FieldsList/utils/getAreaString";
+import {getAreaString} from "../../SideMenu/FieldsList/utils/getAreaString";
 import {EMPTY_DATA} from "../../../constants/constants";
 import {FieldsContext} from "../../App/App";
 
@@ -48,7 +48,7 @@ export const FieldAreaFilter = () => {
             <span className={styles.filter_title}>Field area</span>
             <span className={styles.filtered_areas}>
                 {selectedMin !== null ? getAreaString(selectedMin) : EMPTY_DATA}
-                —
+                <span>—</span>
                 {selectedMax !== null ? getAreaString(selectedMax) : EMPTY_DATA}
             </span>
         </div>

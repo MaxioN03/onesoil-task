@@ -1,5 +1,7 @@
-
 .button_container {
+    display: inline-flex;
+    align-items: flex-start;
+    flex-direction: column;
     position: relative;
     z-index: 1;
 }
