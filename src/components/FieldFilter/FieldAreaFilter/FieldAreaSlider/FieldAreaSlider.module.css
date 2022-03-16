@@ -78,8 +78,18 @@
     z-index: 4;
 }
 
-/* For Chrome browsers */
 .thumb::-webkit-slider-thumb {
+    border: none;
+    cursor: pointer;
+    height: 24px;
+    width: 12px;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative;
+}
+
+.thumb::-moz-range-thumb {
+    background-color: transparent;
     border: none;
     cursor: pointer;
     height: 24px;
@@ -101,8 +111,16 @@
     background-image: url("./left_arrow.svg");
     margin-left: -12px;
 }
+.left_thumb::-moz-range-thumb {
+    background-image: url("./left_arrow.svg");
+    margin-left: -12px;
+}
 
 .right_thumb::-webkit-slider-thumb {
+    background-image: url("./right_arrow.svg");
+    margin-left: 12px;
+}
+.right_thumb::-moz-range-thumb {
     background-image: url("./right_arrow.svg");
     margin-left: 12px;
 }

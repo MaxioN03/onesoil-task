@@ -13,8 +13,7 @@ body {
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
-    scrollbar-width: thin;
-    scrollbar-color: #cccccc #ffffff;
+    scrollbar-width: none;
 }
 
 /* Chrome, Edge, and Safari */

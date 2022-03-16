@@ -29,7 +29,11 @@ export const Checkbox = ({checked, onChange, id, title}: ICheckboxProps) => {
                 checked={checked}
                 onChange={onCheck}
             />
-            <div className={[styles.indicator, checked ? styles.checked : ''].join(' ')}/>
+            <div className={[styles.indicator, checked ? styles.checked : ''].join(' ')}>
+                {checked
+                    ? <div className={styles.check_mark}/>
+                    : null}
+            </div>
         </label>
     );
 };
