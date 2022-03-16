@@ -1,14 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import styles from './FieldsList.module.css';
 import {FieldSuitability} from "../ui/FieldTypeRelativeLine/FieldTypeRelativeLine";
-import {Field} from "./types";
 import {FieldTypeItem} from "./FieldTypeItem/FieldTypeItem";
+import {FieldsContext} from "../App/App";
 
-interface IFieldsListProps {
-    fields: Record<FieldSuitability, Field[]> | null
-}
-
-export const FieldsList = ({fields}: IFieldsListProps) => {
+export const FieldsList = () => {
+    const fields = useContext(FieldsContext);
     const [fieldsCount, setFieldsCount] = useState<Record<FieldSuitability, number> | null>(null);
 
     useEffect(() => {

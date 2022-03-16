@@ -3,14 +3,8 @@ import styles from './FieldFilterButton.module.css';
 import {Button, ButtonSize} from "../../ui/Button/Button";
 import FilterIcon from "./filtered_icon.svg";
 import {FieldFilter} from "../../FieldFilter/FieldFilter";
-import {FieldSuitability} from "../../ui/FieldTypeRelativeLine/FieldTypeRelativeLine";
-import {Field} from "../../FieldsList/types";
 
-interface IFieldFilterButtonProps {
-    fields: Record<FieldSuitability, Field[]> | null
-}
-
-export const FieldFilterButton = ({fields}: IFieldFilterButtonProps) => {
+export const FieldFilterButton = () => {
     const [isFilterOpen, setIsFilterOpen] = useState<boolean>(true);
 
     const onButtonClick = () => {
@@ -22,7 +16,7 @@ export const FieldFilterButton = ({fields}: IFieldFilterButtonProps) => {
                 icon={<img className={styles.icon_container} src={FilterIcon} alt={'Filter icon'}/>}
                 onClick={onButtonClick}/>
         {isFilterOpen
-            ? <FieldFilter fields={fields}/>
+            ? <FieldFilter/>
             : null}
     </div>;
 };

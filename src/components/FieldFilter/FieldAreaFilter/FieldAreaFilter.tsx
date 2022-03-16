@@ -1,17 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {FieldSuitability} from "../../ui/FieldTypeRelativeLine/FieldTypeRelativeLine";
-import {Field} from "../../FieldsList/types";
 import {FieldAreaSlider} from "./FieldAreaSlider/FieldAreaSlider";
 import styles from './FieldAreaFilter.module.css';
 import {getAreaString} from "../../FieldsList/utils/getAreaString";
 import {EMPTY_DATA} from "../../../constants/constants";
+import {FieldsContext} from "../../App/App";
 
-interface IFieldAreaFilterProps {
-    fields: Record<FieldSuitability, Field[]> | null,
-}
-
-export const FieldAreaFilter = ({fields}: IFieldAreaFilterProps) => {
-    // const [fieldsArea, setFieldsArea] = useState<any>();
+export const FieldAreaFilter = () => {
+    const fields = useContext(FieldsContext);
 
     const [minFieldArea, setMinFieldArea] = useState<number | null>(null);
     const [maxFieldArea, setMaxFieldArea] = useState<number | null>(null);

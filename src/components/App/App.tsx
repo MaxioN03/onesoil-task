@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {createContext, useEffect, useState} from 'react';
 import styles from './App.module.css';
 import {Field} from "../FieldsList/types";
 import {FieldSuitability} from "../ui/FieldTypeRelativeLine/FieldTypeRelativeLine";
@@ -6,6 +6,8 @@ import {__FIELDS_MOCK} from "../../__mocks/fields";
 import {PARTIALLY_SUITABLE_BORDER, SUITABLE_BORDER} from "../FieldsList/constants";
 import {Content} from "../Content/Content";
 import {SideMenu} from "../SideMenu/SideMenu";
+
+export const FieldsContext = createContext<Record<FieldSuitability, Field[]> | null>(null);
 
 export const App = () => {
     const [fields, setFields] = useState<Record<FieldSuitability, Field[]> | null>(null);
@@ -35,8 +37,10 @@ export const App = () => {
         setFields(fields);
     };
 
-    return <div className={styles.app}>
-        <SideMenu fields={fields}/>
-        <Content fields={fields}/>
-    </div>;
+    return <FieldsContext.Provider value={fields}>
+        <div className={styles.app}>
+            <SideMenu/>
+            <Content/>
+        </div>
+    </FieldsContext.Provider>;
 };
